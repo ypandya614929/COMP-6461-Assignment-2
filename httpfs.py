@@ -293,17 +293,11 @@ class HTTPF:
                     http_s_obj = HTTPServerLibrary()
                     http_s_obj.setHeader('Content-Disposition', 'attachment')
                     parse_dict = self.process_header_request(data, http_s_obj)
-                    if self._params.debug:
-                        self.check_and_print_debug_message(
-                            "Request Type: " + parse_dict.get('type', ''))
-                        self.check_and_print_debug_message(
-                            "Request Path: " + parse_dict.get('path', ''))
-                        self.check_and_print_debug_message(
-                            "Request Query: " + parse_dict.get('query', ''))
-                        self.check_and_print_debug_message(
-                            "Request Body: " + parse_dict.get('data', ''))
-                        self.check_and_print_debug_message(
-                            "Request Headers: " + str(parse_dict.get('headers', '')))
+                    self.check_and_print_debug_message("Request Type: " + parse_dict.get('type', ''))
+                    self.check_and_print_debug_message("Request Path: " + parse_dict.get('path', ''))
+                    self.check_and_print_debug_message("Request Query: " + parse_dict.get('query', ''))
+                    self.check_and_print_debug_message("Request Body: " + parse_dict.get('data', ''))
+                    self.check_and_print_debug_message("Request Headers: " + str(parse_dict.get('headers', '')))
                     if ".." not in parse_dict.get('path'):
                         path = self.get_actual_path(parse_dict.get('path', ''))
                         method = parse_dict.get('type', '')
