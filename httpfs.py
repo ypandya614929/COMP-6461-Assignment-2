@@ -106,7 +106,8 @@ class HTTPF:
                             help="Specifies the port number that the server will listen and serve at. Default is 8080.",
                             type=int, default=8080)
         parser.add_argument("-d", action="store", dest="path_to_dir",
-                            help="Specifies the directory that the server will use to read/writerequested files. Default is the current directory when launching theapplication.",
+                            help="Specifies the directory that the server will use to read/writerequested files. \
+                            Default is the current directory when launching theapplication.",
                             default='./')
 
         return parser.parse_args()
