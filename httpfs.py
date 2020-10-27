@@ -301,14 +301,13 @@ class HTTPF:
                     if ".." not in parse_dict.get('path'):
                         path = self.get_actual_path(parse_dict.get('path', ''))
                         method = parse_dict.get('type', '')
-                        data = parse_dict.get('data', '')
                         if method:
                             if method.upper() == 'GET':
                                 http_s_obj = self.process_GET_request(
                                     path, http_s_obj)
                             elif method.upper() == 'POST':
                                 http_s_obj = self.process_POST_request(
-                                    path, data, http_s_obj)
+                                    path, parse_dict.get('data', ''), http_s_obj)
                             else:
                                 http_s_obj.setStatusCode(400)
                                 http_s_obj.setData(MAPPING_DICT.get(400))
