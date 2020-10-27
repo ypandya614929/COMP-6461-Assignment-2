@@ -1,0 +1,36 @@
+{
+	"random": 96,
+	"random float": 15.571,
+	"bool": true,
+	"date": "1991-09-09",
+	"regEx": "helloooooooooooooooooooooooo world",
+	"enum": "generator",
+	"firstname": "Cyb",
+	"lastname": "Telfer",
+	"city": "Hong Kong",
+	"country": "Bouvet Island",
+	"countryCode": "MU",
+	"email uses current data": "Cyb.Telfer@gmail.com",
+	"email from expression": "Cyb.Telfer@yopmail.com",
+	"array": [
+		"Jorry",
+		"Berget",
+		"Aili",
+		"Marjie",
+		"Daune"
+	],
+	"array of objects": [
+		{
+			"index": 0,
+			"index start at 5": 5
+		},
+		{
+			"index": 1,
+			"index start at 5": 6
+		},
+		{
+			"index": 2,
+			"index start at 5": 7
+		}
+	]
+}
