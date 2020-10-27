@@ -3,22 +3,20 @@
 
 # commands
 # --------
-# python httpc.py -h
-# python httpc.py get -h
-# python httpc.py post -h
-# python httpc.py get 'http://httpbin.org/get?course=networking&assignment=1'
-# python httpc.py get 'http://httpbin.org/get?course=networking&assignment=1' -o output.txt
-# python httpc.py get -v 'http://httpbin.org/get?course=networking&assignment=1'
-# python httpc.py get -v 'http://httpbin.org/get?course=networking&assignment=1' -o output.txt
-# python httpc.py post --h Content-Type:application/json -d '{"Assignment": 1}' http://httpbin.org/post
-# python httpc.py post --h Content-Type:application/json -d '{"Assignment": 1}' http://httpbin.org/post -o output.txt
-# python httpc.py post -v --h Content-Type:application/json -d '{"Assignment": 1}' http://httpbin.org/post
-# python httpc.py post -v --h Content-Type:application/json -d '{"Assignment": 1}' http://httpbin.org/post -o output.txt
-# python httpc.py post --h Content-Type:application/json -f "data.txt" "http://httpbin.org/post"
-# python httpc.py post --h Content-Type:application/json -f "data.txt" "http://httpbin.org/post" -o output.txt
-# python httpc.py post -v --h Content-Type:application/json -f "data.txt" "http://httpbin.org/post"
-# python httpc.py post -v --h Content-Type:application/json -f "data.txt" "http://httpbin.org/post" -o output.txt
-# python httpc.py get -v "http://google.com/"
+# python httpfs.py -h
+# python httpfs.py -d .
+# python httpfs.py -v -d .
+# python httpfs.py -p 8080 -d .
+# python httpfs.py -v -p 8080 -d .
+# python httpfs.py -v -p 8080 -d {PATH_TO_DIR}.
+# python httpc.py get -v -p 8080 "http://localhost/"
+# python httpc.py get -v -p 8080 "http://localhost/random.json"
+# python httpc.py post -v -p 8080 --h Content-Type:application/json -d "some text here" "http://localhost/demo.txt"
+# python httpc.py get -v -p 8080 --h Content-Disposition:inline "http://localhost/random.json"
+# python httpc.py get -v -p 8080 --h Content-Disposition:attachment "http://localhost/random.json"
+# http://localhost:8080/random.json
+# http://localhost:8080/random.json?inline
+
 
 import socket
 from threading import Thread
