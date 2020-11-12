@@ -8,9 +8,11 @@ COMP-6461-Assignment-2
     pip install -r requirements.txt
 
 ### HTTP Tests
+    - Please start server with "python httpfs.py -v -p 8080 -d ." if not already running.
     - python tests.py
 
 ### HTTP Multithreading Tests
+    - Please start server with "python httpfs.py -v -p 8080 -d ." if not already running.
     - python theadtests.py
 
 ### Assignment-2 Commands
