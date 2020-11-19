@@ -181,7 +181,7 @@ class HTTPF:
             filedata = data
         lock = FileLock(filename)
         lock.acquire()
-        with open(filename, 'a+') as f:
+        with open(filename, 'w+') as f:
             f.write(filedata)
         lock.release()
 
